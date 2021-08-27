@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div class="row">
+    <div class="col-sm-3">
+    </div>
+    <div class="col-sm-6">
+<form #ref="ngForm" (ngSubmit)="Login(ref)">
+
+<!--username-->
+<div class="form-group">
+    <label for="un">Email or Mobile number</label>
+    <input type="text" name="username" id="un" class="form-control" ngModel #ref1="ngModel" required>
+</div>
+<!--validation for username-->
+<div *ngIf="ref1.touched && ref1.invalid" class="alert alert-danger">
+    *Email or mobile number is required
+</div>
+<!--password-->
+<div class="form-group">
+    <label for="pw">password</label>
+    <input type="password" name="password" id="pw" class="form-control" ngModel #ref2="ngModel" required pattern="\d[abc]\d.*">    </div>
+<!--validation for password-->
+<div *ngIf="ref2.invalid && (ref2.dirty || ref2.touched)" class="alert alert-danger">
+
+<div *ngIf="ref2.errors?.required">
+    Email or mobile number is required
+</div>
+<div *ngIf="ref2.errors?.pattern">
+    pattern is not matches..please enter number alphabit and number
+</div>
+</div>
+
+<!--login button-->
+<div class="text-center">
+<button type="submit" class="btn btn-primary">Signup</button>
+</div>
+
+
+</form>
+
+
+
+
+    </div>
+    
+</div>
+
+</body>
+<!------------footer data in detail-->
+<div id="demo" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./assets/big4.jpg" alt="Los Angeles">
+      </div>
+      <div class="carousel-item">
+        <img src="./assets/bg8.jpg" alt="Chicago">
+      </div>
+      <div class="carousel-item">
+        <img src="./assets/big3.jpg" alt="New York">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+</html>
+<router-outlet></router-outlet>

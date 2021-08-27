@@ -1,0 +1,13 @@
+<table class="table">
+    <thead>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Body</th>
+    </thead>
+    <tr *ngFor="let obj of receivedData">
+        <td>{{obj.id}}</td>
+        <td>{{obj.title}}</td>
+        <td>{{obj.body}}</td> <!--for  jason url has then  <img [src]=img.avatar > then and if doudt check nodejs component in mohanamadam angular link-->
+    </tr>
+    </table>
+    <router-outlet></router-outlet>

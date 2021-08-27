@@ -1,0 +1,26 @@
+.hero{
+    height:100vh;
+    width:100%;
+    background-image:url("../../assets/bg3.png");
+    background-size:cover;
+    background-position:center;
+  }
+  footer{
+    background:black;
+    background:webkit-linear-gradient(to right,#00001a,#00004d);
+    background:linear-gradient(to right ,#00001a,#00004d);
+    font-family:serif;
+    color:white;
+  }
+  h1{
+    text-align: center;
+  }
+  i{
+    color:gold;
+  }
+  h1{
+    color: whitesmoke;
+  }
+  *card-deck card i span{
+    color:red;
+  }

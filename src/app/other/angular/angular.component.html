@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <!----lodin form with data print after login button--->
+        <div class="container">
+        <form #ref="ngForm" (ngSubmit)="senData(ref)">
+
+            <div class="form-group">
+                <label for="un">Username</label>
+                <input type="text" name="username" id="un" class="form-control" ngModel>
+            </div>
+            <div class="form-group">
+                <label for="s">Password</label>
+                <select name="country" id="s" class="form-control" ngModel>
+                    <option value=""></option>
+                    <option value="India">INDIA</option>
+                    <option value="Canada">CANADA</option>
+                </select>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-success">SignUp</button>
+            </div>
+        </form>
+    </div>
+
+    <h1>full details</h1>
+    <table class="table">
+         <thead>
+             <tr>
+                <th>EmailID</th>
+                <th>Password</th>
+             </tr>
+         </thead>
+
+         <tbody>
+             <tr *ngFor="let dtls of Details">
+                 <td>{{dtls.EmailID}}</td>
+                 <td>{{dtls.Password}}</td>
+             </tr>
+         </tbody>
+
+        </table>
+</body>
+</html>
+<router-outlet></router-outlet>

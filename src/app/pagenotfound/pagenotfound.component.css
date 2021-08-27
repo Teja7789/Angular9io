@@ -1,0 +1,7 @@
+.hero{
+    height: 60vh;
+    width:60%;
+    background-image:url("../../assets/bg7.png");
+    background-size:cover;
+    background-position:center;
+  }

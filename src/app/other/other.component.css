@@ -1,0 +1,11 @@
+.row .col-sm-3{
+      background-image: url("/assets/images6.jpg");
+      width:10%;
+}
+*form-group{
+      font: snow;
+}
+.carousel-item img {
+      width:100%;
+      height:86vh;
+}
